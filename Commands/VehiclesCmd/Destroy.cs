@@ -17,7 +17,7 @@ namespace BetterEssentials.Commands.VehiclesCmd
         {
             return new SChatCommand("/destroy", new string[] {}, "Détruire le véhicule le plus proche", "/destroy", (player, args) =>
             {
-                if (player.IsAdmin)
+                if (player.IsAdmin && player.account.adminLevel >= 2)
                 {
                     Life.VehicleSystem.Vehicle vehicle = player.GetClosestVehicle();
                     if (vehicle == null) { ChatUtils.SendError(player, "Il n'y a pas de véhicule proche de vous"); return; }
