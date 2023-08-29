@@ -13,7 +13,7 @@ namespace BetterEssentials.Commands.ServerCmd
         {
             return new SChatCommand("/day", "Définir le jour", "/day", (player, args) =>
             {
-                if (!player.IsAdmin) return;
+                if (!player.IsAdmin || player.account.adminLevel < 4) return;
                 EnviroSkyMgr.instance.SetTimeOfDay(11f);
             });
         }
