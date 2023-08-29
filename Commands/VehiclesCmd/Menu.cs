@@ -20,9 +20,9 @@ namespace BetterEssentials.Commands.VehiclesCmd
         {
             return new SChatCommand("/vehicle", new string[] { "/v" }, "Menu des véhicules", "/vehicle", (player, args) =>
             {
-                if (!player.IsAdmin) return;
+                if (!player.IsAdmin || player.account.adminLevel < 2) return;
 
-                UIPanel vAdminPanel = new UIPanel("Gestion véhicule", UIPanel.PanelType.Tab)
+                    UIPanel vAdminPanel = new UIPanel("Gestion véhicule", UIPanel.PanelType.Tab)
                     .AddButton("Fermer", (ui) => player.ClosePanel(ui))
                     .AddButton("Sélectionner", (ui) => ui.SelectTab())
                     .AddTabLine("Définir id entreprise", (ui) =>
