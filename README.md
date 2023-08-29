@@ -17,6 +17,10 @@ BetterEssentials se configure à partir du fichier `Plugins/BetterEssentials/con
 | - | - | - | - |
 | /serviceadmin | /sa | 1 | Activation du service admin |
 | /setadmin | /setadm | 8 | Définir le joueur le plus proche en administrateur |
+#### Terrains
+| Commande | Alias | Niveau admin | Description |
+| - | - | - | - |
+| /terrain | /t | 5 | Modifier le terrain sur lequel vous êtes |
 #### Informations
 | Commande | Alias | Niveau admin | Description |
 | - | - | - | - |
@@ -24,14 +28,20 @@ BetterEssentials se configure à partir du fichier `Plugins/BetterEssentials/con
 | /vehicleinfo | /vi | 1 | Récupérer les informations du véhicule le plus proche |
 | /playerinfos | /pi | 1 | Récupérer les informations du joueur le plus proche |
 | /bizlist | /dl | 1 | Récupérer la liste des entreprises |
-#### Véhicules
-| Commande | Alias | Niveau admin | Description |
-| - | - | - | - |
-| /destroy |  | 1 | Détruire le véhicule le plus proche |
-| /stowvehicle | /stow | 1 | Ranger le véhicule le plus proche |
-| /vehicle | /v | 1 | Menu des véhicules |
 #### Serveur
 | Commande | Alias | Niveau admin | Description |
 | - | - | - | - |
-| /day |  | 1 | Définir le jour |
-| /night |  | 1 | Définir la nuit |
+| /day |  | 4 | Définir le jour |
+| /night |  | 4 | Définir la nuit |
+#### Utilitaires
+| Commande | Alias | Niveau admin | Description |
+| - | - | - | - |
+| /clearinventory | /clearinv | 1 | Vider son inventaire |
+| /help | /h | 1 | Liste des commandes |
+| /me | /m | 0 | Décrire une action |
+#### Véhicules
+| Commande | Alias | Niveau admin | Description |
+| - | - | - | - |
+| /destroy |  | 2 | Détruire le véhicule le plus proche |
+| /stowvehicle | /stow | 2 | Ranger le véhicule le plus proche |
+| /vehicle | /v | 2 | Menu des véhicules |
