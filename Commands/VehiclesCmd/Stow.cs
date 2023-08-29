@@ -15,7 +15,7 @@ namespace BetterEssentials.Commands.VehiclesCmd
         {
             return new SChatCommand("/stowvehicle", new string[] { "/stow" }, "Ranger le véhicule le plus proche", "/stowvehicle", (player, args) =>
             {
-                if (player.IsAdmin)
+                if (player.IsAdmin && player.account.adminLevel >= 2)
                 {
                     Vehicle vehicle = player.GetClosestVehicle(5f);
 
