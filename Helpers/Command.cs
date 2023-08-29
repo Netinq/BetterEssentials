@@ -1,5 +1,6 @@
 ﻿using BetterEssentials.Commands;
 using BetterEssentials.Commands.Administration;
+using BetterEssentials.Commands.AreasCmd;
 using BetterEssentials.Commands.Informations;
 using BetterEssentials.Commands.ServerCmd;
 using BetterEssentials.Commands.Utilities;
@@ -26,18 +27,32 @@ namespace BetterEssentials
 
     public class CommandManager : Base
     {
-        private readonly Terrain terrain = new Terrain();
-        private readonly Vehicle vehicle = new Vehicle();
+        // Administration
         private readonly ServiceAdmin serviceAdmin = new ServiceAdmin();
         private readonly SetAdmin setAdmin = new SetAdmin();
+
+        // AreaCMD
+        private readonly AreaManager areaManager = new AreaManager();
+
+        // Informations
+        private readonly Bizs biz = new Bizs();
         private readonly Commands.Informations.Player player = new Commands.Informations.Player();
+        private readonly Terrain terrain = new Terrain();
+        private readonly Vehicle vehicle = new Vehicle();
+
+        // ServerCMD
+        private readonly Day day = new Day();
+        private readonly Night night = new Night();
+
+        // Utilities
         private readonly ClearInventory clearInventory = new ClearInventory();
+        private readonly Help help = new Help();
+        private readonly Me me = new Me();
+
+        // VehiclesCMD
         private readonly Destroy destroy = new Destroy();
         private readonly Stow stow = new Stow();
         private readonly Menu menu = new Menu();
-        private readonly Bizs biz = new Bizs();
-        private readonly Day day = new Day();
-        private readonly Night night = new Night();
 
         public override void Init(BetterEssentials instance, LifeServer server)
         {
@@ -54,6 +69,9 @@ namespace BetterEssentials
             biz.Init(instance, server);
             day.Init(instance, server);
             night.Init(instance, server);
+            areaManager.Init(instance, server);
+            help.Init(instance, server);
+            me.Init(instance, server);
         }
     }
 }
