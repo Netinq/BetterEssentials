@@ -14,24 +14,24 @@ BetterEssentials se configure à partir du fichier `Plugins/BetterEssentials/con
 ### Liste des commandes
 #### Administration
 | Commande | Alias | Niveau admin | Description |
-| - | - | - |
+| - | - | - | - |
 | /serviceadmin | /sa | 1 | Activation du service admin |
 | /setadmin | /setadm | 8 | Définir le joueur le plus proche en administrateur |
 #### Informations
-| Commande | Alias | Description |
-| - | - | - |
+| Commande | Alias | Niveau admin | Description |
+| - | - | - | - |
 | /terraininfo | /ti | 1 | Récupérer les informations du terrain sur lequel vous vous situez |
 | /vehicleinfo | /vi | 1 | Récupérer les informations du véhicule le plus proche |
 | /playerinfos | /pi | 1 | Récupérer les informations du joueur le plus proche |
 | /bizlist | /dl | 1 | Récupérer la liste des entreprises |
 #### Véhicules
 | Commande | Alias | Niveau admin | Description |
-| - | - | - |
+| - | - | - | - |
 | /destroy |  | 1 | Détruire le véhicule le plus proche |
 | /stowvehicle | /stow | 1 | Ranger le véhicule le plus proche |
 | /vehicle | /v | 1 | Menu des véhicules |
 #### Serveur
 | Commande | Alias | Niveau admin | Description |
-| - | - | - |
+| - | - | - | - |
 | /day |  | 1 | Définir le jour |
 | /night |  | 1 | Définir la nuit |
