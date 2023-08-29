@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81478769-247C-4FD6-B6BD-D9DA29BBC0A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BetterEssentials</RootNamespace>
+    <AssemblyName>BetterEssentials</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Components">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Mirror.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\Logiciels\steamapps\common\Nova-Life\Nova-Life_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BetterEssentials.cs" />
+    <Compile Include="Broadcast\JoinLeave.cs" />
+    <Compile Include="Commands\Administration\ServiceAdmin.cs" />
+    <Compile Include="Commands\Administration\SetAdmin.cs" />
+    <Compile Include="Commands\Informations\Bizs.cs" />
+    <Compile Include="Commands\Informations\Player.cs" />
+    <Compile Include="Commands\ServerCmd\Night.cs" />
+    <Compile Include="Commands\ServerCmd\Day.cs" />
+    <Compile Include="Commands\Utilities\ClearInventory.cs" />
+    <Compile Include="Commands\VehiclesCmd\Destroy.cs" />
+    <Compile Include="Commands\VehiclesCmd\Menu.cs" />
+    <Compile Include="Commands\VehiclesCmd\Stow.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Enums\HexColors.cs" />
+    <Compile Include="Utils\ChatUtils.cs" />
+    <Compile Include="Utils\PlayerUtils.cs" />
+    <Compile Include="Utils\TerrainUtils.cs" />
+    <Compile Include="Utils\VehicleUtils.cs" />
+    <Compile Include="Helpers\Base.cs" />
+    <Compile Include="Helpers\Command.cs" />
+    <Compile Include="Commands\Informations\Terrain.cs" />
+    <Compile Include="Commands\Informations\Vehicle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
